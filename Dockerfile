@@ -1,10 +1,10 @@
 FROM ubuntu:14.04
-MAINTAINER curtis <curtis@serverascode.com>
+MAINTAINER nashtrash <graham.hemingway@gmail.com>
 
 #
 # supervisor
 #
-
+RUN apt-get update -qq
 RUN apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
 ADD files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
